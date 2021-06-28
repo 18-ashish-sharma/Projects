@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+
+body{
+    background-color:darkgray;
+    
+    font-family: 'Lora', serif;
+    color: rgb(247, 252, 252);
+    /* text-shadow: 2px 2px 0px #eeffa2, 5px 4px 0px rgba(0,0,0,0.15); */
+  }
+
+  
+  input{
+      background-color: rgb(183, 250, 233);
+  }
+
+  h1{
+    color:purple;
+    text-align:center;
+  }
+  .bordered{
+    border: 2px solid purple ;
+  }
+  table{
+    background-image: url('https://images.pexels.com/photos/1114690/pexels-photo-1114690.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-color: "";
+  }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Form</title>
+</head>
+<body>
+   
+     <h1><u>REGISTRATION FORM</u></h1>
+     <div class="main">
+    <table align = "center" cellpadding="10"   class = "bordered">
+   
+   <form method="POST" action="/post">
+   
+      <tr><form class="form-horizontal">
+    <div class="col-sm-10">
+       <label for="First Name"><td>Name</label><td>
+    <input type="text" name="name" class="form-control" required id="name" placeholder="Your Name">(max 30 character a-z and A-Z)
+  </div></tr>
+    
+      <tr> <div class="col-sm-10">
+         <br>
+         <td>Date Of Birth
+           <td>
+    <input type="Date" name="dob" required />
+       </tr>
+      <tr><form class="form-horizontal">
+    <div class="col-sm-10">
+       <label for="First Name"><td>Email ID</label><td>
+    <input type="text" name="email" class="form-control" required id="email" placeholder="Enter you e-mail">
+  </div></tr>
+        <tr><form class="form-horizontal">
+    <div class="col-sm-10">
+       <label for="First Name"><td>Mobile Number</label><td>
+    <input type="text" name="phone"  class="form-control" id="phone" pattern="[789][0-9]{9}" required placeholder="10-Digit number">(10 digit number)
+  
+  </div></tr>
+          <tr>
+            <label for="Gender"><td>Gender</label><td>
+
+<label for="male">Male</label>
+<input type="radio" name="gender" id="male" value="male">
+<label for="female">Female</label>
+<input type="radio" name="gender" id="female" value="female"><br></td>
+ 
+
+       <tr><form class="form-horizontal">
+    <div class="col-sm-10">
+       <label for="First Name"><td></label><td>
+   <button type="submit" class="btn btn-primary">Submit</button>
+      
+  </div></tr>
+      
+
+   </table>
+   </div>
+   </form>
+   
+
+   <script src="form.js"></script>
+    
+    </body>
+</html>
