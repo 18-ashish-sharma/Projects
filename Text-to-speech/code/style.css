@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+
+/* body {
+	background-color: aqua;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	font-family: 'Akaya Kanadaka', cursive;
+	background-attachment: fixed;
+}  */
+
+body {
+	height: 100vh;
+	font-family: 'Akaya Kanadaka', cursive;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+#front-text {
+	font-size: 35px;
+	color: rgb(54, 221, 213);
+	font-weight: bolder;
+	text-shadow: 1px 1px 1px black;
+	display: block;
+	position: relative;
+	margin-bottom: 5%;
+	margin-top: 15%;
+}
+
+#rate-value {
+	float: right;
+}
+
+#pitch-value {
+	float: right;
+}
+
+#foot {
+	font-size: 20px;
+	color: white;
+	font-weight: bolder;
+	display: block;
+	position: relative;
+	margin-top: 1%;
+}
