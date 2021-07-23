@@ -1,11 +1,24 @@
 // import { getAuth } from '../../utils/auth'
 import { Redirect } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import data from '../../data (8).json'
+// import data from '../../data (8).json'
+
+import { useEffect, useState } from 'react';
 
 import './index.scss';
 
 const Profile = () => {
+
+    const [ postlist, setPostlist ] = useState([]);
+
+    useEffect(() => {
+        const datFound = async() => {
+            const resp = await fetch('http://localhost:5000/allData')
+            const jsonData = await resp.json()
+            setPostlist(jsonData)
+        }
+        datFound()
+    },[])
 
     const isLoggedIn = useSelector(state => state.auth)
     
@@ -23,10 +36,11 @@ const Profile = () => {
             <div className="profile-container">
                 <h1>{profile.firstname}</h1>
                 <span>{profile.email}</span>
+                <br/><br/>
             </div>
             <div>
                     {
-                        data.map((item) => {
+                        postlist.map((item) => {
                             return (
                                 <div className="card" id='main' style={{width: '18rem'}}>
                                     <div className="card-body" key={item.id}>
@@ -47,3 +61,17 @@ const Profile = () => {
 export default Profile
 
 
+
+
+// fetch("http://localhost:5000/allData")
+// .then(response => {
+//   console.log(response)
+// })
+// .then(posts => {
+//   setPostlist(posts);
+//   console.log(posts)
+// })
+// .then(err => {
+//   console.log(err);
+// });
+// })

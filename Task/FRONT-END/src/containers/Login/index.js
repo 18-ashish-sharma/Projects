@@ -8,7 +8,7 @@ import Toast from '../../components/Toast'
 import Inputfield from '../../components/Inputfield';
 import { setAuth } from '../../utils/auth';
 import authAction from '../../actions/authAction'
-import ColorContext from '../../context/ColorContext'
+// import ColorContext from '../../context/ColorContext'
 
 let schema = yup.object().shape({
     password: yup.string().required().min(6),

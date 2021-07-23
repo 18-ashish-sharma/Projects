@@ -2,8 +2,11 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const UserModel = require('./models/user')
+const DataModel  = require('./models/Data')
+const dataToUpload = require('./data.json') 
 app.use(express.json())
-const multer = require('multer')
+
+// const multer = require('multer')
 
 // const upload = multer({
 //     storage:multer.diskStorage,
@@ -90,4 +93,30 @@ app.post("/user", async (req, res) => {
 //     res.json(req.file)
 //     // cloudinary.uploader.upload(req.file)
 // })
+
+
+app.post('/data', async (req, res) => {
+    try {
+        
+        DataModel.insertMany(dataToUpload)
+        console.log('data saved')
+        res.send('SAVED')
+
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+app.get('/allData' , async (req, res) => {
+
+    try {
+        
+        const foundData = await DataModel.find({})
+        res.send(foundData)
+
+    } catch (error) {
+        console.log(error)
+    }
+})
+
 app.listen(5000)
