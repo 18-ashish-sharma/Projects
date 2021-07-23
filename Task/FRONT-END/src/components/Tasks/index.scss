@@ -1,0 +1,38 @@
+.task-container {
+  .task-form {
+    display: flex;
+    .form-control {
+      width: 75%;
+      margin-right: .5rem;
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+
+  .task-list-container {
+    list-style-type: none;
+    margin-top: 2.5rem;
+    padding-left: 0;
+    width: 75%;
+
+    .task-list-item {
+      display: flex;
+      align-items: center;
+
+      &__li {
+        margin-bottom: .5rem;
+        padding: .7rem 0 .7rem .6rem;
+        border: 2px solid rgb(219, 121, 121);
+        border-radius: .5rem;
+        width: 100%;
+        margin-right: .25rem; 
+      }
+
+      .bi-trash-fill {
+        cursor: pointer;
+      }
+    }
+  }
+}

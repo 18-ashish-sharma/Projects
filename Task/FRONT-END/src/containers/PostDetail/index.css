@@ -1,0 +1,16 @@
+.posts {
+  display: flex;
+}
+
+.post-list-item {
+  width: 100%;
+  padding: 1rem 1rem .5rem 1rem;
+  border-radius: 1rem;
+  border: 2px solid #3d3b3c;
+  cursor: pointer;
+  margin: 5px 10px;
+}
+
+.post-details {
+  width: 45%;
+}

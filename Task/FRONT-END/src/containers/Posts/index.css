@@ -1,0 +1,38 @@
+.posts {
+  display: flex;
+}
+
+.post-container {
+  width: 50%;
+  border: 2px solid #5C33F6;
+  background-color: #FF94CC;
+  font-family: monospace;
+  border-radius: .5rem;
+  height: 85vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.post-container h1 {
+  text-align: center;
+}
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-list-item {
+  width: 100%;
+  padding: 1rem 1rem .5rem 1rem;
+  border-radius: 1rem;
+  border: 2px solid #3d3b3c;
+  cursor: pointer;
+  margin: 5px 10px;
+}
+
+.post-details {
+  width: 45%;
+}
